@@ -8,11 +8,6 @@ public class MainMenu : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 
-    public void SettingsButtonClicked()
-    {
-
-    }
-
     public void QuitButtonClicked()
     {
         Debug.Log("Game Quit");
