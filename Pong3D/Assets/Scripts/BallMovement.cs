@@ -4,10 +4,12 @@ public class BallMovement : MonoBehaviour {
 
     public Rigidbody rb;
 
-    Vector3 speeds = new (1,0,1);
 
     void Start()
     {
+        float speed = PlayerPrefs.GetFloat("BallSpeed");
+        Vector3 speeds = new (speed,0,speed);
+
         float xDirection = Random.Range(0,2)==0 ? -1:1;
         float zDirection = Random.Range(0,2)==0 ? -1:1;
 

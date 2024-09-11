@@ -1,20 +1,28 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SaveSystem : MonoBehaviour
-{
+public class SaveSystem : MonoBehaviour {
+
+    float ballSpeed;
+
     void Start()
     {
         Load();
     }
 
-    public void Save(float ballSpeed)
+    public void SetBallSpeed(float _ballSpeed)
+    {
+        ballSpeed = _ballSpeed;
+    }
+
+    public void Save()
     {
         PlayerPrefs.SetFloat("BallSpeed", ballSpeed);
     }
 
     public void Load()
     {
-        FindObjectOfType<Slider>().value = PlayerPrefs.GetFloat("BallSpeed");
+        ballSpeed = PlayerPrefs.GetFloat("BallSpeed");
+        FindObjectOfType<Slider>().value = ballSpeed;
     }
 }
