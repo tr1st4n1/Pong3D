@@ -27,10 +27,12 @@ public class GameManager : MonoBehaviour {
 
     public void RestartGame(bool _newGame)
     {
+        /*
         // reset opponent/ai paddle
         float aiX = FindObjectOfType<AIController>().tr.position.x;
         float aiY = FindObjectOfType<AIController>().tr.position.y;
         FindObjectOfType<AIController>().tr.position = new (aiX, aiY, 0);
+        */
 
         // ball exists
         if (ball != null)
