@@ -3,8 +3,8 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour {
     
     public static bool GameIsPaused = false;
-    public GameObject pauseMenuUI;
-    public GameObject scoreCanvas;
+    public GameObject pauseMenuPanel;
+    public GameObject gameCanvas;
 
     void Update()
     {
@@ -24,15 +24,15 @@ public class PauseMenu : MonoBehaviour {
     public void Resume()
     {
         Time.timeScale = 1f;
-        pauseMenuUI.SetActive(false);
-        scoreCanvas.SetActive(true);
+        pauseMenuPanel.SetActive(false);
+        gameCanvas.SetActive(true);
         GameIsPaused = false;
     }
 
     public void Pause()
     {
-        scoreCanvas.SetActive(false);
-        pauseMenuUI.SetActive(true);
+        gameCanvas.SetActive(false);
+        pauseMenuPanel.SetActive(true);
         GameIsPaused = true;
         Time.timeScale = 0f;
     }
