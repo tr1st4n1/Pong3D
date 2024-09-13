@@ -3,6 +3,8 @@ using UnityEngine;
 public class AIController : MonoBehaviour {
     
     public Transform tr;
+    public GameManager gameManager;
+    GameObject ball;
 
     // Legacy Variables
     public const float difficultyRange = 1.5f;
@@ -20,7 +22,7 @@ public class AIController : MonoBehaviour {
     
     void Update()
     {
-        GameObject ball = FindObjectOfType<GameManager>().ball;
+        ball = gameManager.ball;
         if (ball!=null)
         {
             MovePaddleEndless(ball.transform);

@@ -7,7 +7,10 @@ public class PaddleControl : MonoBehaviour {
 
     void Update()
     {
-        MovePaddle();
+        if (Time.timeScale==1f)
+        {
+            MovePaddle();
+        }
     }
 
     void MovePaddle()

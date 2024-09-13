@@ -1451,6 +1451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tr: {fileID: 1872874664}
+  gameManager: {fileID: 1780464675}
 --- !u!1 &1898438333
 GameObject:
   m_ObjectHideFlags: 0
