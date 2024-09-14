@@ -27,12 +27,11 @@ public class GameManager : MonoBehaviour {
 
     public void RestartGame(bool _newGame)
     {
-        /*
-        // reset opponent/ai paddle
-        float aiX = FindObjectOfType<AIController>().tr.position.x;
-        float aiY = FindObjectOfType<AIController>().tr.position.y;
-        FindObjectOfType<AIController>().tr.position = new (aiX, aiY, 0);
-        */
+        // New Highscore
+        if (score>PlayerPrefs.GetInt("Highscore"))
+        {
+            PlayerPrefs.SetInt("Highscore", score);
+        }
 
         // ball exists
         if (ball != null)

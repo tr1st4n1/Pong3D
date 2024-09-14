@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class SaveSystem : MonoBehaviour {
 
     float ballSpeed;
+    int highscore;
 
     void Start()
     {
@@ -24,5 +25,7 @@ public class SaveSystem : MonoBehaviour {
     {
         ballSpeed = PlayerPrefs.GetFloat("BallSpeed");
         FindObjectOfType<Slider>().value = ballSpeed;
+
+        highscore = PlayerPrefs.GetInt("Highscore");
     }
 }
