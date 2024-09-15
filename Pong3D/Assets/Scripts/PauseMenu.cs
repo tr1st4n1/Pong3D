@@ -7,16 +7,25 @@ public class PauseMenu : MonoBehaviour {
     public GameObject pauseMenuPanel;
     public GameObject gameCanvas;
 
+    AudioManager audioManager;
+
+    void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
             {
+                audioManager.PlaySFX(audioManager.button);
                 Resume();
             }
             else if (!GameIsPaused)
             {
+                audioManager.PlaySFX(audioManager.button);
                 Pause();
             }
         }
